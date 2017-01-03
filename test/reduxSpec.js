@@ -1,6 +1,7 @@
 /*global describe, it*/
 
 import { setUser, updateUser } from '../client/src/actions/actions.js';
+import reducer from '../client/src/reducers/reducers.js';
 var expect = require('chai').expect;
 
 describe('actions', function() {
@@ -21,10 +22,10 @@ describe('actions', function() {
   })
 })
 
-describe('reducers', function() {
-  describe('user', function() {
-    it('should record a new user in the state', function() {
-      expect(false).to.equal(true);
-    })
+describe('reducer', function() {
+  it('should record a new user in the state', function() {
+    var action = {type: 'SET_USER', user: {name: 'jeff bridges'}};
+    var state = {user: {}};
+    expect(reducer(state, action).user.name).to.equal('jeff bridges');
   })
 })
