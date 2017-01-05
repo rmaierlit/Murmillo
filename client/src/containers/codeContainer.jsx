@@ -12,6 +12,9 @@ const mapDispatchToProps = (dispatch) => {
   return {
     updateCode: function(text) {
       dispatch(setCode(text));
+    },
+    submitCode: function() {
+      dispatch(submitCode());
     }
   }
 }
