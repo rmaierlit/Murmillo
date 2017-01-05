@@ -1,10 +1,7 @@
 export const SET_USER = 'SET_USER';
 export const UPDATE_USER = 'UPDATE_USER';
-<<<<<<< HEAD
 export const SET_ROOM = 'SET_ROOM';
-=======
 export const SET_CODE = 'SET_CODE';
->>>>>>> (feat)editor: saves state of code in Redux
 
 //user actions
 export function setUser(user) {
