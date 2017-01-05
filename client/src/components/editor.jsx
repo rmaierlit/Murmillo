@@ -11,12 +11,8 @@ class Editor extends React.Component {
     super(props);
   }
 
-  updateCode(text) {
-    console.log(text);
-    //should send text to store
-  }
-
   render() {
+    console.log(this.props.code);
     return(
       <AceEditor
         mode="javascript"
@@ -27,9 +23,9 @@ class Editor extends React.Component {
         maxLines={50}
         ref="ace"
         fontSize={18}
-        value="//type your code here"
+        value={this.props.code}
         editorProps={{$blockScrolling: Infinity}}
-        onChange={this.updateCode}
+        onChange={this.props.updateCode}
         onLoad={(editor) => {
           editor.focus();
           editor.getSession().setUseWrapMode(true);
