@@ -3,7 +3,7 @@ import { setCode, requestCodeCheck, receiveCodeCheck} from '../actions/actions.j
 import {submitSoln} from '../socketHandler.js';
 import Editor from '../components/editor.jsx';
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
   return {
     code: state.code !== null ? state.code : state.problem.template,
     room: state.room,
